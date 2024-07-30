@@ -88,13 +88,16 @@ class Attitude(object):
     :param roll: Roll in radians
     """
 
-    def __init__(self, pitch, yaw, roll):
+    def __init__(self, pitch, yaw, roll,pitch_rate,yaw_rate,roll_rate):
         self.pitch = pitch
         self.yaw = yaw
         self.roll = roll
+        self.pitch_rate=pitch_rate
+        self.yaw_rate=yaw_rate
+        self.roll_rate=roll_rate
 
     def __str__(self):
-        fmt = '{}:pitch={pitch},yaw={yaw},roll={roll}'
+        fmt = '{}:pitch={pitch},yaw={yaw},roll={roll},pitchrate={pict_rate},yawrate={yaw_rate},rollrate={roll_rate}'
         return fmt.format(self.__class__.__name__, **vars(self))
 
 
